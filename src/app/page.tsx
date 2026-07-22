@@ -10,8 +10,8 @@ export default function Home() {
             <a href="#about" className="hover:text-foreground">
               About
             </a>
-            <a href="#" className="hover:text-foreground">
-              Filler
+            <a href="/apr/index.html" className="hover:text-foreground">
+              APR
             </a>
             <a href="#" className="hover:text-foreground">
               Filler
