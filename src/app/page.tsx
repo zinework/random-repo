@@ -13,7 +13,7 @@ export default function Home() {
             height="88"
             patternUnits="userSpaceOnUse"
           >
-            <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.55">
+            <g fill="none" stroke="currentColor" strokeWidth="1.25" opacity="0.8">
               <rect x="20" y="20" width="48" height="48" />
               <rect
                 x="20"
@@ -26,7 +26,7 @@ export default function Home() {
             </g>
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill="url(#khatam)" opacity="0.05" />
+        <rect width="100%" height="100%" fill="url(#khatam)" opacity="0.14" />
       </svg>
 
       {/* Hero — single-word focal title */}

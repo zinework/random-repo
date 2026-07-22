@@ -29,4 +29,17 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  cursor:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><path d="M13 2 L21 13 L13 24 L5 13 Z" fill="%231d5088" stroke="white" stroke-width="1.5"/></svg>')
+      13 13,
+    auto;
+}
+
+a,
+button,
+[role="button"] {
+  cursor:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path d="M15 2 L25 15 L15 28 L5 15 Z" fill="%2314304d" stroke="white" stroke-width="1.5"/></svg>')
+      15 15,
+    pointer;
 }
