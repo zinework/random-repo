@@ -32,7 +32,12 @@ export default function RootLayout({
       lang="en"
       className={`${bodySans.variable} ${headingSerif.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div className="sticky top-0 z-[100] bg-accent-strong px-4 py-2 text-center text-xs font-medium uppercase tracking-[0.12em] text-white sm:text-sm">
+          Work in Progress &mdash; This Site Is Not Yet Live
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

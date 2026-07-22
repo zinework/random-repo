@@ -1,6 +1,34 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-16 px-6 py-24">
+    <main className="relative flex min-h-screen flex-col items-center justify-center gap-16 overflow-hidden px-6 py-24">
+      {/* Subtle Islamic geometric watermark (8-point khatam star tessellation) */}
+      <svg
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full text-accent"
+      >
+        <defs>
+          <pattern
+            id="khatam"
+            width="88"
+            height="88"
+            patternUnits="userSpaceOnUse"
+          >
+            <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.55">
+              <rect x="20" y="20" width="48" height="48" />
+              <rect
+                x="20"
+                y="20"
+                width="48"
+                height="48"
+                transform="rotate(45 44 44)"
+              />
+              <circle cx="44" cy="44" r="4" />
+            </g>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#khatam)" opacity="0.05" />
+      </svg>
+
       {/* Hero — single-word focal title */}
       <section className="flex flex-col items-center text-center">
         <span className="mb-6 h-px w-16 bg-accent/50" aria-hidden />
