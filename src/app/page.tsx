@@ -1,55 +1,55 @@
 export default function Home() {
   return (
-    <>
-      <header className="w-full border-b border-border">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
-          <span className="font-serif text-lg font-semibold tracking-tight">
-            MIRC
-          </span>
-          <nav className="flex gap-6 text-sm text-muted">
-            <a href="#about" className="hover:text-foreground">
-              About
-            </a>
-            <a href="/apr/index.html" className="hover:text-foreground">
-              APR
-            </a>
-            <a href="#" className="hover:text-foreground">
-              Filler
-            </a>
-          </nav>
+    <main className="flex min-h-screen flex-col items-center justify-center gap-16 px-6 py-24">
+      {/* Hero — single-word focal title */}
+      <section className="flex flex-col items-center text-center">
+        <span className="mb-6 h-px w-16 bg-accent/50" aria-hidden />
+        <h1 className="font-serif text-[clamp(2.4rem,11vw,7rem)] font-semibold leading-none tracking-tight text-accent-strong">
+          Islamophobia
+        </h1>
+        <span className="mt-6 h-px w-16 bg-accent/50" aria-hidden />
+      </section>
+
+      {/* APR story — clickable card with an embedded live mini-view */}
+      <a
+        href="/apr/index.html"
+        className="group relative block w-full max-w-2xl overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_18px_50px_-12px_rgba(20,48,77,0.28)] transition-transform duration-300 hover:-translate-y-1"
+        aria-label="Open the APR story"
+      >
+        {/* live mini preview: iframe rendered large then scaled to fill the frame */}
+        <div className="relative aspect-[16/10] w-full overflow-hidden">
+          <iframe
+            src="/apr/index.html"
+            title="APR story preview"
+            tabIndex={-1}
+            aria-hidden
+            scrolling="no"
+            className="pointer-events-none absolute left-0 top-0 h-[320%] w-[320%] origin-top-left scale-[0.3125] border-0"
+          />
+          {/* click-through overlay so the whole card opens the full story */}
+          <span className="absolute inset-0" aria-hidden />
         </div>
-      </header>
 
-      <main className="flex-1">
-        <section className="mx-auto max-w-5xl px-6 py-28 text-center">
-          <h1 className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
-            Lorem ipsum dolor sit
-          </h1>
-          <p className="mx-auto mt-5 max-w-xl text-lg text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder
-            copy for the landing page.
-          </p>
-
-          <div className="mx-auto mt-12 max-w-sm rounded-lg border border-border bg-surface px-6 py-5">
-            <h3 className="font-serif text-lg font-semibold tracking-tight">
-              Highlight
-            </h3>
-          </div>
-        </section>
-
-        <section id="about" className="border-t border-border bg-surface">
-          <div className="mx-auto max-w-5xl px-6 py-20">
-            <h2 className="font-serif text-2xl font-semibold tracking-tight">
-              About APR
-            </h2>
-            <p className="mt-4 max-w-2xl text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation.
-            </p>
-          </div>
-        </section>
-      </main>
-    </>
+        {/* corner cue (icon only, no text) */}
+        <span
+          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-accent text-surface shadow-md transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          aria-hidden
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2.2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M7 17 17 7" />
+            <path d="M8 7h9v9" />
+          </svg>
+        </span>
+      </a>
+    </main>
   );
 }

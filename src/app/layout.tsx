@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MIRC",
+  title: "Islamophobia",
   description: "Research hub.",
 };
 

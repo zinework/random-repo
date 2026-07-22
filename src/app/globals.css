@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
+/* Cream & blue light theme — committed look (no dark override). */
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --muted: #6b6b6b;
-  --border: #e5e5e5;
-  --surface: #f7f7f5;
+  color-scheme: light;
+  --background: #f4ecda; /* cream */
+  --surface: #fbf6ec; /* lighter cream (cards) */
+  --foreground: #16304d; /* deep blue (primary text) */
+  --muted: #5c6a7a; /* blue-grey */
+  --border: #e3d8c1; /* warm cream border */
+  --accent: #1d5088; /* blue */
+  --accent-strong: #14304d; /* deep blue */
 }
 
 @theme inline {
@@ -14,19 +18,11 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
   --font-sans: var(--font-body);
   --font-serif: var(--font-heading);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --muted: #9a9a9a;
-    --border: #262626;
-    --surface: #141414;
-  }
 }
 
 body {
